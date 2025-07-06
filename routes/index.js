@@ -24,4 +24,8 @@ messageRouter.get('/', (req, res) => {
     res.render('index', {title: "Mini message board", messages: messages});
 })
 
+messageRouter.get('/new-message', (req, res) => {
+    res.render('form');
+})
+
 module.exports = messageRouter;
