@@ -4,7 +4,7 @@ const messageRouter = Router();
 
 const messages = [
   {
-    text: "Hi therre",
+    text: "Hi there",
     user: "John",
     added: new Date(),
   },
