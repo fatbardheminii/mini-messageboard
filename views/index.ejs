@@ -8,7 +8,7 @@
   <body>
     <h1>Mini Messageboard</h1>
     <button><a href="/new-message">New Message</a></button>
-    <% for (let i = 0, i < messages.length, i++) { %> <% const message = messages[i]
+    <% for (let i = 0; i < messages.length; i++) { %> <% const message = messages[i]
     %> <% const messageAdded = message.added.toLocaleString(); %>
     <div class="message-container">
       <h2 class="user"><%= message.user %></h2>

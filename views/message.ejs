@@ -8,6 +8,7 @@
 <body>
     <h1>Message Details</h1>
     <div class="message-details-container">
+        <% const messageAdded = message.added.toLocaleString() %>
         <h2 class="user"><%= message.user %></h2>
       <p class="text"><%= message.text %></p>
       <p class="added"><%= messageAdded %></p>

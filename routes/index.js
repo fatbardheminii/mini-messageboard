@@ -39,11 +39,11 @@ messageRouter.post("/new-message", (req, res) => {
   res.redirect('/');
 });
 
-messageRouter.get('message/:id', (req, res) => {
+messageRouter.get('/message/:id', (req, res) => {
     const id = req.params.id;
     const message = messages[id];
     if (message) {
-        res.render('/message', { message: message });
+        res.render('message', { message: message });
     } else {
         res.redirect('/');
     }
