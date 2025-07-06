@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Message</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
     <h1>New Message</h1>
     <form action="/new-message" method="post">
-        <label for="messageText">Message:</label>
-        <input type="text" name="messageText">
-        <label for="messageUser">User:</label>
-        <input type="text" name="messageUser">
-        <button type="submit">Submit</button>
+      <label for="messageText">Message:</label>
+      <textarea id="messageText" name="messageText" required></textarea>
+      <label for="messageUser">User:</label>
+      <input type="text"  id="messageUser" name="messageUser" required />
+      <button type="submit">Submit</button>
     </form>
-    <button><a href="/">Homepage</a></button>
-</body>
+    <a href="/" class="button">Homepage</a>
+  </body>
 </html>

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message Details</title>
-</head>
-<body>
-    <h1>Message Details</h1>
-    <div class="message-details-container">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Message Details</h1>
+      <div class="message-details-container">
         <% const messageAdded = message.added.toLocaleString() %>
         <h2 class="user"><%= message.user %></h2>
-      <p class="text"><%= message.text %></p>
-      <p class="added"><%= messageAdded %></p>
+        <p class="text"><%= message.text %></p>
+        <p class="added"><%= messageAdded %></p>
+      </div>
+      <a href="/" class="button">Homepage</a>
     </div>
-    <button><a href="/">Homepage</a></button>
-</body>
+  </body>
 </html>
