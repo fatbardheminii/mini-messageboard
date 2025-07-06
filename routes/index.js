@@ -1,4 +1,4 @@
-const Router = require('express').Router;
+const Router = require("express").Router;
 
 const messageRouter = Router();
 
@@ -20,12 +20,23 @@ const messages = [
   },
 ];
 
-messageRouter.get('/', (req, res) => {
-    res.render('index', {title: "Mini message board", messages: messages});
-})
+messageRouter.get("/", (req, res) => {
+  res.render("index", { title: "Mini message board", messages: messages });
+});
 
-messageRouter.get('/new-message', (req, res) => {
-    res.render('form');
-})
+messageRouter.get("/new-message", (req, res) => {
+  res.render("form");
+});
+
+messageRouter.post("/new-message", (req, res) => {
+  const { messageText, messageUser } = req.body;
+  const newMessage = {
+    text: messageText,
+    user: messageUser,
+    added: new Date()
+  };
+  messages.unshift(newMessage);
+  res.redirect('/');
+});
 
 module.exports = messageRouter;
