@@ -13,4 +13,12 @@ app.use(express.static(assetsPath));
 
 app.use('/', messageRouter);
 
+app.use((req, res) => {
+  res.status(404).send("Page Not Found");
+});
+
+app.use((err, req, res, next) => {
+  res.status(500).send("Something went wrong!");
+});
+
 app.listen(port, () => console.log(`Server is running on port: ${port}`));

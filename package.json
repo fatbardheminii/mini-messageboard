@@ -6,13 +6,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "express",
+    "ejs",
+    "message-board"
+  ],
+  "author": "Fatbardh Emini",
   "license": "ISC",
-  "description": "",
+  "description": "A simple message board built with Express and EJS",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

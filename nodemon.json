@@ -1,4 +1,16 @@
 {
+  "ignore": [
+    "node_modules/",
+    "public/",
+    "*.log",
+    ".DS_Store",
+    "package-lock.json",
+    "*.tmp",
+    "*.bak",
+    "*~",
+    ".vscode/",
+    ".idea/"
+  ],
   "watch": ["app.js", "routes/", "views/"],
-  "ignore": ["node_modules/", "*.log"]
+  "ext": "js,ejs"
 }
