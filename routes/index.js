@@ -23,3 +23,5 @@ const messages = [
 messageRouter.get('/', (req, res) => {
     res.render('index', {title: "Mini message board", messages: messages});
 })
+
+module.exports = messageRouter;

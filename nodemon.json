@@ -1,0 +1,4 @@
+{
+  "watch": ["app.js", "routes/", "views/"],
+  "ignore": ["node_modules/", "*.log"]
+}

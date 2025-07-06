@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mini Messageboard</h1>
+    <button><a href="/new-message">New Message</a></button>
+    <% for (const message of messages) { %> <% const messageAdded =
+    message.added.toLocaleString(); %>
+    <div class="message-container">
+      <h2 class="user"><%= message.user %></h2>
+      <p class="text"><%= message.text %></p>
+      <p class="added"><%= messageAdded %></p>
+      <% } %>
+    </div>
+  </body>
+</html>
