@@ -35,8 +35,18 @@ messageRouter.post("/new-message", (req, res) => {
     user: messageUser,
     added: new Date()
   };
-  messages.unshift(newMessage);
+  messages.push(newMessage);
   res.redirect('/');
 });
+
+messageRouter.get('message/:id', (req, res) => {
+    const id = req.params.id;
+    const message = messages[id];
+    if (message) {
+        res.render('/message', { message: message });
+    } else {
+        res.redirect('/');
+    }
+})
 
 module.exports = messageRouter;
