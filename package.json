@@ -15,8 +15,10 @@
   "license": "ISC",
   "description": "A simple message board built with Express and EJS",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
