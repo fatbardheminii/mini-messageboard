@@ -1,26 +1,39 @@
 # Mini Messageboard
 
 ## Overview
-This Mini Messageboard is a beginner-friendly web application built as part of The Odin Project's Node.js curriculum. It serves as a practical exercise to learn server-side development, routing, and templating with Node.js and Express.
+A beginner-friendly web app built for The Odin Project's Node.js curriculum. Practice server-side development, routing, templating, and now persistent storage with PostgreSQL.
 
 ## Features
-- View a list of messages with user names and timestamps.
-- Add new messages via a form.
+- View messages with user names and timestamps.
+- Add new messages via a form (with validation).
 - Display individual message details.
-- Responsive design with clean, professional styling.
+- Messages are stored in a PostgreSQL database.
 
 ## Technologies Used
-- **Node.js**: JavaScript runtime for server-side logic.
-- **Express**: Web framework for routing and middleware.
-- **EJS**: Templating engine for dynamic HTML rendering.
-- **CSS**: Custom styles for a polished, responsive UI.
-- **Nodemon**: Development tool for auto-restarting the server.
-
-## Purpose
-Created to practice building a full-stack web application, handling HTTP requests, and rendering dynamic content. The project demonstrates core concepts like routing, form handling, and server-side templating.
+- Node.js
+- Express
+- EJS
+- CSS
+- pg (PostgreSQL client)
+- dotenv
+- Nodemon
 
 ## Getting Started
 1. Clone the repository: `git clone <repository-url>`
 2. Install dependencies: `npm install`
-3. Run the server: `npm run dev`
-4. Open `http://localhost:3000` in your browser.
+3. Create a `.env` file in the project root:
+   ```
+   DATABASE_URL=postgresql://<user>:<password>@<host>:<port>/<database>
+   ```
+4. Make sure your database has a `messages` table:
+   ```sql
+   CREATE TABLE IF NOT EXISTS messages (
+     id SERIAL PRIMARY KEY,
+     text TEXT NOT NULL,
+     "user" TEXT NOT NULL,
+     added TIMESTAMPTZ DEFAULT NOW()
+   );
+   ```
+5. (Optional) Populate the database: `node db/populatedb.js`
+6. Run the server: `npm start`
+7. Open `http://localhost:3000` in your browser.
